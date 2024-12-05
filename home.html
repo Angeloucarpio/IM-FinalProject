@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Social App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="logout.php">Logout</a>
+    </div>
+    
+    <div class="content">
+        <h2>Welcome, [User Name]</h2>
+        
+        <!-- New Post Form -->
+        <form action="post.php" method="POST">
+            <textarea name="content" placeholder="What's on your mind?" required></textarea>
+            <button type="submit">Post</button>
+        </form>
+
+        <div class="posts">
+            <!-- Loop through posts and display them -->
+            <div class="post">
+                <p><strong>Username</strong> <span>Posted on: Date</span></p>
+                <p>Post content...</p>
+                <div class="comments">
+                    <form action="comment.php" method="POST">
+                        <textarea name="comment" placeholder="Add a comment..." required></textarea>
+                        <button type="submit">Comment</button>
+                    </form>
+                    <!-- Display comments here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
